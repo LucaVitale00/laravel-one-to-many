@@ -10,13 +10,14 @@ class PersonDetail extends Model
     use HasFactory;
 
     protected $fillable = [
+        
         'phone',
         'address',
-        'avatar'
+        'avatar',
     ];
 
-    // FUNZIONE CHE IDENTIFICA RELAZIONE:
-    public function person(){
-        return $this-> belongsTo(Person::class);
+    public function person() {
+
+        return $this -> belongsTo(Person :: class);
     }
 }

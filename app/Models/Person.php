@@ -10,17 +10,17 @@ class Person extends Model
     use HasFactory;
 
     protected $fillable = [
+        
         'name',
-        'mail'
+        'mail',
     ];
 
-    // FUNZIONE CHE IDENTIFICA RELAZIONE CON PERSON_DETAILS:
-    public function PersonDetail(){
-        return $this -> hasOne(PersonDetail::class);
-    }
+    public function personDetail() {
 
-    // FUNZIONE CHE IDENTIFICA RELAZIONE CON POSTS:
-    public function posts(){
-        return $this-> hasMany(Post::class);
+        return $this -> hasOne(PersonDetail :: class);
+    }
+    public function posts() {
+
+        return $this -> hasMany(Post :: class);
     }
 }
